@@ -1,10 +1,10 @@
 # Data Cleaning and Preparation
 ### 1. Data Cleaning and Data Quality Checks
-1. **a. Convert data types:** ID as Text, dates as Date/DateTime, status as Text, and monetary values ​​as Decimal/Currency.
-2. **b. Handle missing values** ​​in approval, carrier delivery, customer delivery, and estimated delivery dates.
-3. **c. Handle duplicate data** for fields that should be unique—specifically `order_id` in the `orders` table, and `customer_id` / `customer_unique_id` in the `customers` table.
-4. **d. Validate order status values** ​​(e.g., delivered, canceled, shipped, processing, invoiced, and any other statuses present in the source data).
-5. **e. Validate for illogical dates—for instance,** cases where the customer delivery date precedes the carrier delivery date.
+- **a. Convert data types:** ID as Text, dates as Date/DateTime, status as Text, and monetary values ​​as Decimal/Currency.
+- **b. Handle missing values** ​​in approval, carrier delivery, customer delivery, and estimated delivery dates.
+- *c. Handle duplicate data** for fields that should be unique—specifically `order_id` in the `orders` table, and `customer_id` / `customer_unique_id` in the `customers` table.
+- **d. Validate order status values** ​​(e.g., delivered, canceled, shipped, processing, invoiced, and any other statuses present in the source data).
+- **e. Validate for illogical dates—for instance,** cases where the customer delivery date precedes the carrier delivery date.
 
 ### 2. Delivery Status Classification
 A new column has been added to the Orders table to classify the Delivery Status as `Delivered Early`, `On Time`, `Late`, or `Not Delivered`. Additionally, `Delivery Days` and `Delivery Delay Days` columns have been included to track the duration of the delivery and the number of days delayed, if applicable.
